@@ -1,1 +1,36 @@
-/home/ross/.Xresources
+*background:  #0f111a
+*foreground:  #e5e9f0
+*color0:  #3B4252
+*color1:  #BF616A
+*color2:  #A3BE8C
+*color3:  #EBCB8B
+*color4:  #81A1C1
+*color5:  #B48EAD
+*color6:  #88C0D0
+*color7:  #E5E9F0
+*color8:  #4C566A
+*color9:  #BF616A
+*color10:  #A3BE8C
+*color11:  #EBCB8B
+*color12:  #81A1C1
+*color13:  #B48EAD
+*color14:  #88C0D0
+*color15:  #B48EAD
+
+Xft.dpi: 96
+Xft.antialias: true
+Xft.rgba: rgb
+Xft.hinting: true
+Xft.hintstyle: hintslight
+Xft.autohint: false
+Xft.lcdfilter: lcddefault
+
+URxvt*font: xft:IBM Plex Mono:size=8:antialias=true:hinting=true
+URxvt*letterspace: -2
+URxvt.depth: 32
+URxvt.background: [90]#0f111a
+
+URxvt.scrollBar: false
+URxvt.scrollBar_Right: false
+URxvt.scrollBar_floating: false
+URxvt.scrollstyle: rxvt
