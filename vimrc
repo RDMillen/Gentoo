@@ -1,3 +1,5 @@
+#RDMillen VimRC
+
 set nocompatible
 
 filetype off
