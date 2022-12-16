@@ -25,7 +25,7 @@ Xft.hintstyle: hintslight
 Xft.autohint: false
 Xft.lcdfilter: lcddefault
 
-URxvt*font: xft:IBM Plex Mono:size=8:antialias=true:hinting=true
+URxvt*font: xft:IBM Plex Mono:size=9:antialias=true:hinting=true
 URxvt*letterspace: -2
 URxvt.depth: 32
 URxvt.background: [90]#0f111a
