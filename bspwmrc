@@ -2,17 +2,14 @@
 
 pgrep -x sxhkd > /dev/null || sxhkd &
 xrdb ~/.Xresources &
-#xsetroot -cursor_name left_ptr &
-#setxkbmap gb &
-#feh --bg-scale /home/ross/Pictures/wallpaper.jpg &
-#picom &
-#dunst &
+xsetroot -cursor_name left_ptr &
+setxkbmap gb &
+feh --bg-scale /home/ross/Pictures/wallpaper2.jpg &
+/usr/bin/gentoo-pipewire-launcher &
+picom &
 polybar main &
-#wmname LG3D &
-nextcloud &
+wmname LG3D &
 blueman-applet &
-sudo wg-quick up /etc/wireguard/Mullvad.conf & 
-#protonmail-bridge &
 
 bspc monitor -d I II III IV V VI
 
