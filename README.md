@@ -11,6 +11,7 @@ I have it setup to build with support for:
 - LUKS on LVM
 - EXT4 root filesystem
 - Support for IWD, Wireguard, NFS and CIFS/SMB
+- Updated to include firmware for the Intel AX200 WiFi card
 
 # Make.Conf
 Some of the stuff that is defined here:
