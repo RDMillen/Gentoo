@@ -3,15 +3,18 @@
 pgrep -x sxhkd > /dev/null || sxhkd &
 xrdb ~/.Xresources &
 xsetroot -cursor_name left_ptr &
-setxkbmap gb &
+setxkbmap -layout gb,us -option grp:shifts_toggle &
 feh --bg-scale /home/ross/Pictures/wallpaper2.jpg &
 /usr/bin/gentoo-pipewire-launcher &
 picom &
 polybar main &
 wmname LG3D &
 blueman-applet &
+solaar &&
+./AppImage/filen_x86_64.AppImage &
+flatpak run ch.protonmail.protonmail-bridge &
 
-bspc monitor -d I II III IV V VI
+bspc monitor -d I II III IV V VI VII VIII
 
 bspc config border_width        1
 bspc config window_gap          2
