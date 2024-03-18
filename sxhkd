@@ -126,7 +126,11 @@ XF86MonBrightness{Up,Down}
 
 #Audio
 XF86Audio{Raise,Lower}Volume
-  amixer set Master 5%{+,-}
+  amixer -D pulse set Master 5%{+,-}
 
 XF86AudioMute
-  amixer set Master toggle
+  amixer -D pulse set Master toggle
+
+#Screen Locker
+super + q
+  i3lock-fancy-rapid 5 3
