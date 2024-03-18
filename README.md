@@ -5,7 +5,7 @@ installation with BSPWM, SXHKD and Polybar. Plus, being Gentoo, my make.conf
 and Kernel configuration file for kernel version 6.1.46.
 
 # Kernel
-The kernelConfig file can be placed at /usr/src/linux/.config on T480 machines, minor chages to WiFi firmware loading required as of 6.1.46
+The kernelConfig file can be placed at /usr/src/linux/.config on T480 machines, minor chages to WiFi firmware loading required as of 6.6-21.
 I have it setup to build with support for:
 - Virtualised guest machines
 - LUKS on LVM
