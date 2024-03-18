@@ -51,17 +51,17 @@ padding-right = 2
 module-margin-left = 1
 module-margin-right = 2
 
-font-0 = Ibm Plex Mono:pixelsize=10;1
+font-0 = Overpass:pixelsize=10;1
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = WunconSiji:style=Regular:pixelsize=10;1
 font-3 = MaterialDesignIconsDesktop:style=Regular:size=15
 
 modules-left = bspwm xwindow
 modules-center =  
-modules-right = pulseaudio battery battery1 wlan date
+modules-right = pulseaudio battery battery1 tray date
 
-tray-position = right
-tray-padding = 2
+#tray-position = right
+#tray-padding = 2
 ;tray-background = #0063ff
 
 ;wm-restack = bspwm
@@ -71,10 +71,15 @@ override-redirect = true
 cursor-click = pointer
 cursor-scroll = ns-resize
 
+[module/tray]
+type=internal/tray
+format-margin = 8px
+tray-spacing = 8px
+
 [module/xwindow]
 type = internal/xwindow
 label = %title%
-label-maxlen = 50
+label-maxlen = 80
 
 [module/bspwm]
 type = internal/bspwm
@@ -82,21 +87,29 @@ type = internal/bspwm
 label-focused = %index%
 label-focused-background = ${colors.background-alt}
 label-focused-underline= ${colors.primary}
-label-focused-padding = 2
+label-focused-padding = 4
 
 label-occupied = %index%
-label-occupied-padding = 2
+label-occupied-padding = 4 
 
 label-urgent = %index%!
 label-urgent-background = ${colors.alert}
-label-urgent-padding = 2
+label-urgent-padding = 4
 
 label-empty = %index%
 label-empty-foreground = ${colors.foreground-alt}
-label-empty-padding = 2
+label-empty-padding = 4
 
 ; Separator in between workspaces
 ; label-separator = |
+
+[module/cpu]
+type = internal/cpu
+interval = 2
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground-alt}
+format-underline = #f90000
+label = %percentage:2%%
 
 [module/wlan]
 type = internal/network
@@ -171,7 +184,7 @@ battery = BAT0
 adapter = AC
 full-at = 98
 
-format-charging = <animation-charging> <label-charging>
+format-charging = <animation-charging> Int <label-charging>
 format-charging-underline = #A3BE8C
 
 format-discharging = <animation-discharging> <label-discharging>
@@ -204,7 +217,7 @@ battery = BAT1
 adapter = AC
 full-at = 98
 
-format-charging = <animation-charging> <label-charging>
+format-charging = <animation-charging> Ext <label-charging>
 format-charging-underline = #A3BE8C
 
 format-discharging = <animation-discharging> <label-discharging>
@@ -230,6 +243,13 @@ animation-discharging-1 = 
 animation-discharging-2 = 
 animation-discharging-foreground = ${colors.foreground}
 animation-discharging-framerate = 750
+
+[module/wireguard]
+type = custom/script
+exec = $HOME/.config/polybar/polybar-wireguard/polybar-wireguard
+tail = false
+interval = 1
+click-left = $HOME/.config/polybar/polybar-wireguard/polybar-wireguard --toggle &
 
 [settings]
 screenchange-reload = true
